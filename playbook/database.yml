@@ -1,3 +1,4 @@
 ---
 -hosts: database
 tasks: install mysql-server
+apt: name=mysql-server state=present update_cache=yes
