@@ -1,0 +1,5 @@
+---
+-hosts: all
+tasks:
+- name: git server hostname
+command: hostname
