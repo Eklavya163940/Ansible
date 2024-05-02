@@ -1,3 +1,4 @@
+COMMANDS LEARNED
 ansible --list-hosts all [ gives list of all hosts]
 
 ansible --list-hosts "*" [ gives list of all hosts using wild card]
