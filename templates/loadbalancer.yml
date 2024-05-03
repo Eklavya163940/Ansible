@@ -1,0 +1,17 @@
+---
+- hosts: loadbalancer
+  become: true
+  tasks:
+    - name: install nginx
+      apt: name=nginx state=present update_cache=yes
+
+    - name: ensure nginx started
+      service: name=nginx state=started enabled =yes
+
+    - name: configure nginxsite
+      template: src=templats/ngnix.conf.2 dest=/etc/ngnix/sites-availabel/demo mode=0644
+      notify:: restart nginx
+
+  handlers:
+    - name: restart nginx
+      services: name=nginx state=restarted
