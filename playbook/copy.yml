@@ -14,11 +14,16 @@
 
     - name: ensure mod_wsgi enabled
       apache2_module: state=present name=wsgi
-      notify: restart apache2
+      modify: restart apache2
 
+    - name: copy demo app
+      copy: src=demo/app dest=/var/www/demo mode=0755
+      notify: restarted apache2
 
   handlers:
-    - name: restart apache2
-      service: name=apace2 state=restarted 
+      - name: restart apache2
+        service: name=apace2 state=restarted
 
-      # used notify to trigger handlers:
+
+
+        # used copy command 

@@ -1,6 +1,6 @@
 {
     "ansible.python.interpreterPath": "/bin/python3",
     "ansible.ansible.reuseTerminal": true,
-    "ansible.validation.lint.arguments": "ansible-lint",
-    "ansible.executionEnvironment.enabled": true
+    "ansible.validation.lint.arguments": "",
+    "ansible.executionEnvironment.enabled": false
 }
