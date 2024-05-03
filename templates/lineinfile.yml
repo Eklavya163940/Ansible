@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  become: true 
+  tasks:
+   - name: ensure mysql listening on all ports
+     lineinfile: dest = file.txt
+     line: hello
+
+
+     # LEARNED ABOUT lineinfile: COMMAND
