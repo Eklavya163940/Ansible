@@ -1,0 +1,15 @@
+---
+- hosts: control
+  tasks:
+   - name: verify end-to-end response
+     uri: url=http://{{item}} return_content=yes
+     with_items: groups.loadbalancer
+
+     register: lb_index
+
+   - fail: msg="Index failed to return content"
+     when: "'hello from sunny' not in item.content"
+     with_items: "{{lb_index.results}}"
+
+
+     # Learned about URI, REGISTER, FAIL modules
