@@ -1,0 +1,4 @@
+---
+- include: control.yml
+
+# INCLUDE can be used to run the contents of the modules instead of you writing all the hosts logic again and again
