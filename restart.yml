@@ -1,0 +1,11 @@
+---
+- name: Restart Virtual Host on Localhost
+  hosts: target
+  become: true
+  tasks:
+    - name: Restart Virtual Host
+      service:
+        name: apache2 
+        state: restarted
+     
+

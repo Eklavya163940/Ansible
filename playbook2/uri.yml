@@ -11,5 +11,4 @@
      when: "'hello from sunny' not in item.content"
      with_items: "{{lb_index.results}}"
 
-
      # Learned about URI, REGISTER, FAIL modules

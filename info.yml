@@ -1,0 +1,7 @@
+---
+- hosts: target
+  gather_facts: yes
+  tasks:
+  - name: gathering cpu details
+    debug:
+      var: ansible_processor

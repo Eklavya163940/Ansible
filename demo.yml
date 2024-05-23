@@ -1,0 +1,5 @@
+---
+- hosts: target
+  tasks:
+   - name: copy a file
+     command: touch file3.txt

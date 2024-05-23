@@ -1,0 +1,16 @@
+---
+- name: Send files to Virtual Host
+  hosts: target
+  tasks:
+    - name: Copy files to Virtual Host
+      copy:
+        src: "{{ item.src }}"
+        dest: "/path/to/virtual/host/{{ item.dest }}"
+      with_items:
+        - { src: "/local/path/to/file1.txt", dest: "file1.txt" }
+        - { src: "/local/path/to/file2.txt", dest: "file2.txt" }
+        - { src: "/local/path/to/file3.txt", dest: "file3.txt" }
+        - { src: "/local/path/to/file4.txt", dest: "file4.txt" }
+        - { src: "/local/path/to/file5.txt", dest: "file5.txt" }
+        - { src: "/local/path/to/file6.txt", dest: "file6.txt" }
+

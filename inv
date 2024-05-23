@@ -1,0 +1,2 @@
+[target]
+ansible_connection=ssh ansible_host=192.168.232.124 ansible_user=vboxuser ansible_ssh_pass=einfochips@123

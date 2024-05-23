@@ -1,0 +1,13 @@
+---
+- hosts: target
+  tasks:
+    - name: Creating file1.txt
+      command: touch file1.txt
+
+    - name: Creating file2.txt
+      command: touch file2.txt
+    
+    - name: Creating file3.txt
+      command: touch file3.txt
+  
+   

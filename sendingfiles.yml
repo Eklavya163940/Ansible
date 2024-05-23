@@ -1,0 +1,15 @@
+---
+- name: Send files to Virtual Host
+  hosts: target
+  tasks:
+    - name: Copy files to Virtual Host
+      copy:
+        src: "{{ item.src }}"
+        dest: "/home/vboxuser{{ item.dest }}"
+      with_items:
+        - { src: "/ansible/file1.txt", dest: "file1.txt" }
+        - { src: "/ansible/file2.txt", dest: "file2.txt" }
+        - { src: "/ansible/file3.txt", dest: "file3.txt" }
+        - { src: "/ansible/file4.txt", dest: "file4.txt" }
+        - { src: "/ansible/file5.txt", dest: "file5.txt" }
+        - { src: "/ansible/file6.txt", dest: "file6.txt" }
